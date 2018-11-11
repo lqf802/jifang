@@ -1,0 +1,51 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="主键" value="${item.id}" underline="true"/>
+                            <#input id="expertCode" name="专家编号" value="${item.expertCode}" underline="true"/>
+                            <#input id="expertName" name="专家姓名" value="${item.expertName}" underline="true"/>
+                            <#input id="sex" name="性别" value="${item.sex}" underline="true"/>
+                            <#input id="birthday" name="出生日期" value="${item.birthday}" underline="true"/>
+                            <#input id="politics" name="政治面貌" value="${item.politics}" underline="true"/>
+                            <#input id="idNumber" name="身份证号" value="${item.idNumber}" underline="true"/>
+                            <#input id="photo" name="照片" value="${item.photo}" underline="true"/>
+                            <#input id="position" name="职务" value="${item.position}" underline="true"/>
+                            <#input id="professorGrade" name="职称" value="${item.professorGrade}" underline="true"/>
+                            <#input id="professorType" name="专业类别" value="${item.professorType}" underline="true"/>
+                            <#input id="professorAge" name="从事专业年限" value="${item.professorAge}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="eduction" name="最高学历" value="${item.eduction}" underline="true"/>
+                            <#input id="degree" name="最高学位" value="${item.degree}" underline="true"/>
+                            <#input id="address" name="所在地区" value="${item.address}" underline="true"/>
+                            <#input id="trade" name="所属行业" value="${item.trade}" underline="true"/>
+                            <#input id="createId" name="创建ID" value="${item.createId}" underline="true"/>
+                            <#input id="createDate" name="创建日期" value="${item.createDate}" underline="true"/>
+                            <#input id="updateId" name="更新ID" value="${item.updateId}" underline="true"/>
+                            <#input id="updateDate" name="更新日期" value="${item.updateDate}" underline="true"/>
+                            <#input id="phone" name="联系电话" value="${item.phone}" underline="true"/>
+                            <#input id="eMail" name="电子邮箱" value="${item.eMail}" underline="true"/>
+                            <#input id="companyPhone" name="单位电话" value="${item.companyPhone}" underline="true"/>
+                            <#input id="companyName" name="工作单位" value="${item.companyName}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="ExpertInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="ExpertInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/jifang/expert/expert_info.js"></script>
+@}

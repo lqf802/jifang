@@ -1,0 +1,37 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <#input id="id" name="主键ID" value="${item.id}" underline="true"/>
+                            <#input id="areaName" name="所属区域" value="${item.areaName}" underline="true"/>
+                            <#input id="scheduleQty" name="监控申报数量" value="${item.scheduleQty}" underline="true"/>
+                            <#input id="actualQty" name="已建数量" value="${item.actualQty}" underline="true"/>
+                            <#input id="masterName" name="区域负责人" value="${item.masterName}" />
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="equipmentDate" name="设备更新日期" value="${item.equipmentDate}" underline="true"/>
+                            <#input id="createId" name="录入ID" value="${item.createId}" underline="true"/>
+                            <#input id="createDate" name="录入日期" value="${item.createDate}" underline="true"/>
+                            <#input id="updateId" name="更新ID" value="${item.updateId}" underline="true"/>
+                            <#input id="updateDate" name="更新日期" value="${item.updateDate}" />
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="VideoMainInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="VideoMainInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/jifang/videoMain/videoMain_info.js"></script>
+@}

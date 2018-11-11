@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.jifang.dao.ExpertMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.jifang.model.Expert">
+        <id column="id" property="id" />
+        <result column="expert_code" property="expertCode" />
+        <result column="expert_name" property="expertName" />
+        <result column="sex" property="sex" />
+        <result column="birthday" property="birthday" />
+        <result column="politics" property="politics" />
+        <result column="id_number" property="idNumber" />
+        <result column="photo" property="photo" />
+        <result column="position" property="position" />
+        <result column="professor_grade" property="professorGrade" />
+        <result column="professor_type" property="professorType" />
+        <result column="professor_age" property="professorAge" />
+        <result column="eduction" property="eduction" />
+        <result column="degree" property="degree" />
+        <result column="address" property="address" />
+        <result column="trade" property="trade" />
+        <result column="create_id" property="createId" />
+        <result column="create_date" property="createDate" />
+        <result column="update_id" property="updateId" />
+        <result column="update_date" property="updateDate" />
+        <result column="phone" property="phone" />
+        <result column="e_mail" property="eMail" />
+        <result column="company_phone" property="companyPhone" />
+        <result column="company_name" property="companyName" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, expert_code AS expertCode, expert_name AS expertName, sex, birthday, politics, id_number AS idNumber, photo, position, professor_grade AS professorGrade, professor_type AS professorType, professor_age AS professorAge, eduction, degree, address, trade, create_id AS createId, create_date AS createDate, update_id AS updateId, update_date AS updateDate, phone, e_mail AS eMail, company_phone AS companyPhone, company_name AS companyName
+    </sql>
+
+</mapper>

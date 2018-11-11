@@ -1,0 +1,38 @@
+@layout("/common/_container.html"){
+<div class="ibox float-e-margins">
+    <div class="ibox-content">
+        <div class="form-horizontal">
+
+            <input type="hidden" id="id" value="${item.id}">
+
+            <div class="row">
+                <div class="col-sm-6 b-r">
+                            <input type="hidden" id="id" value="${item.id}"/>
+                            <#input id="fileName" name="名称" value="${item.fileName}" underline="true"/>
+                            <#input id="filePart" name="分区" value="${item.filePart}" readonly="readonly" underline="true"/>
+                            <#input id="fileSize" name="大小" value="${item.fileSize}" readonly="readonly" underline="true"/>
+                            <#input id="fileType" name="类型" value="${item.fileType}" readonly="readonly" underline="true"/>
+                </div>
+
+                <div class="col-sm-6">
+                            <#input id="createTime" name="创建时间" value="${item.createTime}" readonly="readonly" underline="true"/>
+                            <#input id="modifyTime" name="修改时间" value="${item.modifyTime}" readonly="readonly" underline="true"/>
+                            <#input id="createUserId" name="上传人" value="${item.createUserId}" readonly="readonly" underline="true"/>
+                            <#input id="modifyUserId" name="修改人" value="${item.modifyUserId}" readonly="readonly" underline="true"/>
+                </div>
+            </div>
+
+            <div class="row btn-group-m-t">
+                <div class="col-sm-10">
+                    <#button btnCss="info" name="提交" id="ensure" icon="fa-check" clickFun="FileInfoDlg.editSubmit()"/>
+                    <#button btnCss="danger" name="取消" id="cancel" icon="fa-eraser" clickFun="FileInfoDlg.close()"/>
+                    <#button btnCss="danger" name="删除" id="cancel" icon="fa-remove" clickFun="FileInfoDlg.close()"/>
+                    <#button btnCss="danger" name="下载" id="cancel" icon="fa-download" clickFun="FileInfoDlg.close()"/>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/system/file/file_info.js"></script>
+@}

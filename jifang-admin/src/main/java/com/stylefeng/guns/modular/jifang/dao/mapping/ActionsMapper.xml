@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.jifang.dao.ActionsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.jifang.model.Actions">
+        <id column="id" property="id" />
+        <result column="company_name" property="companyName" />
+        <result column="action_describe" property="actionDescribe" />
+        <result column="punish_type" property="punishType" />
+        <result column="law_clause" property="lawClause" />
+        <result column="action_dept" property="actionDept" />
+        <result column="action_date" property="actionDate" />
+        <result column="create_id" property="createId" />
+        <result column="create_date" property="createDate" />
+        <result column="update_id" property="updateId" />
+        <result column="update_date" property="updateDate" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, company_name AS companyName, action_describe AS actionDescribe, punish_type AS punishType, law_clause AS lawClause, action_dept AS actionDept, action_date AS actionDate, create_id AS createId, create_date AS createDate, update_id AS updateId, update_date AS updateDate
+    </sql>
+
+    <select id="selectlistActions" resultType="map">
+        select
+        <include refid="Base_Column_List" />
+        from jf_actions
+        where 1=1
+        <if test="companyName != null and companyName != ''">
+            and (company_name like CONCAT('%',#{companyName},'%'))
+        </if>
+        <if test="beginTime != null and beginTime != '' and endTime != null and endTime != ''">
+            and (action_date between CONCAT(#{beginTime},' 00:00:00') and CONCAT(#{endTime},' 23:59:59'))
+        </if>
+    </select>
+
+
+</mapper>

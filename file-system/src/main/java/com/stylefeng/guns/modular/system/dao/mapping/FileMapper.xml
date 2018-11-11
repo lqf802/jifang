@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stylefeng.guns.modular.system.dao.FileMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.stylefeng.guns.modular.system.model.File">
+        <id column="id" property="id" />
+        <result column="file_name" property="fileName" />
+        <result column="file_part" property="filePart" />
+        <result column="file_path" property="filePath" />
+        <result column="file_size" property="fileSize" />
+        <result column="file_type" property="fileType" />
+        <result column="file_url" property="fileUrl" />
+        <result column="modul_name" property="modulName" />
+        <result column="parent_id" property="parentId" />
+        <result column="sort" property="sort" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="delete_time" property="deleteTime" />
+        <result column="create_user_id" property="createUserId" />
+        <result column="modify_user_id" property="modifyUserId" />
+        <result column="delete_user_id" property="deleteUserId" />
+        <result column="purview" property="purview" />
+        <result column="is_valid" property="isValid" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, file_name AS fileName, file_part AS filePart, file_path AS filePath, file_size AS fileSize, file_type AS fileType, file_url AS fileUrl, modul_name AS modulName, parent_id AS parentId, sort, create_time AS createTime, modify_time AS modifyTime, delete_time AS deleteTime, create_user_id AS createUserId, modify_user_id AS modifyUserId, delete_user_id AS deleteUserId, purview, is_valid AS isValid
+    </sql>
+
+</mapper>
